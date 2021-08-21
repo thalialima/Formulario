@@ -1,112 +1,247 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 
-    <head>
-        <!-- Metadados -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Banco de Currículos</title>
 
-        <!-- Título da página (aparece na aba) -->
-        <title>Cadastro</title>
-    </head>
+</head>
 
-    <body>  
 
-        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+<body>
+
+
+    <!-- Cabeçalho (título e subtítulo) -->
+    <header>
         <div>
-            <h1 id="titulo">Cadastro de DEVs</h1>
-            <p id="subtitulo">Complete suas informações</p>
+            <h1 id="titulo">Cadastro de Currículos</h1>
+            <p id="subtitulo">Dados Pessoais</p>
             <br>
         </div>
+    </header>
 
-        <!-- Início do formulário -->
-        <form>
+    <!-- Início do formulário -->
+    <form>
 
-            <fieldset class="grupo">
-                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
-                    <input type="text" name="nome" id="nome" required>
-                </div>
-
-                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="sobrenome"><strong>Sobrenome</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
-                </div>
-            </fieldset> 
-
-            <!-- Campo de email com-->
+        <fieldset class="grupo">
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
             <div class="campo">
-                <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" required>
+                <label for="nome"><strong>Nome Completo</strong></label>
+                <input type="text" name="nome" id="nome" required>
             </div>
 
-            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <!-- Campo do cargo com legenda "cargo" e css de classe "campo" -->
             <div class="campo">
-                <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-                <label>
-                    <input type="radio" name="devweb" value="frontend" checked>Front-end
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="backend">Back-end
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="fullstack">Fullstack
-                </label>
+                <label for="cargo"><strong>Cargo Pretendido</strong></label>
+                <input type="text" name="cargo" id="cargo" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+            <!-- Campo de data de nascimento -->
+            <div class="campo">
+                <label for="cargo"><strong>Data de Nascimento</strong></label>
+                <input id="date" type="date">
             </div>
 
-            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <!-- Campo de estado civil com 5 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
-                <label for="senioridade"><strong>Senioridade</strong></label>
-                <select id="senioridade" required>
-                  <option selected disabled value="">Selecione</option>
-                  <option>Júnior</option>
-                  <option>Pleno</option>
-                  <option>Sênior</option>
+                <label for="estado-civil"><strong>Estado Civil</strong></label>
+                <select id="estado-civil" style="width:150px" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Casado(a)</option>
+                    <option>Divorciado(a)</option>
+                    <option>Separado(a)</option>
+                    <option>Solteiro(a)</option>
+                    <option>Viúvo(a)</option>
                 </select>
             </div>
 
-            <fieldset class="grupo">
-                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
-                <div id="check">
-                    <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
-                    <label for="tecnologia1"> HTML</label>
-                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
-                    <label for="tecnologia2"> CSS</label>
-                    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript">
-                    <label for="tecnologia3"> JavaScript</label>
-                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
-                    <label for="tecnologia4"> PHP</label>
-                    <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
-                    <label for="tecnologia5"> C#</label>
-                    <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
-                    <label for="tecnologia6"> Python</label>
-                    <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
-                    <label for="tecnologia7"> Java</label>
-                </div>
-            </fieldset>
-
-            <!-- Caixa de texto -->
+            <!-- Campo de sexo com 2 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
-                <br>
-                <label for="experiencia"><strong>Conte um pouco mais da sua experiência: </strong></label>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                <label for="sexo"><strong>Sexo</strong></label>
+                <select id="sexo" style="width:150px" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="grupo">
+
+            <!-- Campo de endereço -->
+            <div class="campo">
+                <label for="endereco"><strong>Endereço</strong></label>
+                <input type="text" name="endereco" id="endereco" required>
             </div>
 
-            <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+            <!-- Campo do bairro -->
+            <div class="campo">
+                <label for="bairro"><strong>Bairro</strong></label>
+                <input type="text" name="bairro" id="bairro" required>
+            </div>
 
-        </form>
+            <!-- Campo da cidade -->
+            <div class="campo">
+                <label for="cidade"><strong>Cidade</strong></label>
+                <input type="text" name="cidade" id="cidade" required>
+            </div>
 
-    </body>
+            <!-- Campo do cep -->
+            <div class="campo">
+                <label for="cep"><strong>CEP</strong></label>
+                <input type="text" name="cep" id="cep" required>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="grupo">
+            <!-- Campo de telefone-->
+            <div class="campo">
+                <label for="telefone"><strong>Telefone 1</strong></label>
+                <input type="text" name="telefone" id="telefone" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone"><strong>Telefone 2</strong></label>
+                <input type="text" name="telefone" id="telefone" required>
+            </div>
+
+            <!-- Campo de celular-->
+            <div class="campo">
+                <label for="celular"><strong>Celular</strong></label>
+                <input type="text" name="celular" id="celular" required>
+            </div>
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>E-mail</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="grupo">
+            <!-- Campo de rg-->
+            <div class="campo">
+                <label for="rg"><strong>Identidade</strong></label>
+                <input type="text" name="rg" id="rg" required>
+            </div>
+
+            <!-- Campo de cpf-->
+            <div class="campo">
+                <label for="cpf"><strong>CPF</strong></label>
+                <input type="text" name="cpf" id="cpf" required>
+            </div>
+
+            <!-- Campo de veículo com 2 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="veiculo"><strong>Possui Veículo</strong></label>
+                <select id="veiculo" style="width:150px" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+            <!-- Campo de habilitação com 2 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="habilitacao"><strong>Possui Habilitação</strong></label>
+                <select id="habilitacao" style="width:150px" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+        <div class="campo">
+            <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
+            <select id="senioridade" style="width:150px" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Front-End</option>
+                <option>Back-End</option>
+                <option>Full-Stack</option>
+            </select>
+        </div>
+
+        <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+        <div class="campo">
+            <label for="senioridade"><strong>Qual o seu nível de experiência?</strong></label>
+            <select id="senioridade" style="width:150px" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Júnior</option>
+                <option>Pleno</option>
+                <option>Sênior</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+            <div id="check">
+
+                <label><strong>Selecione as tecnologias que você utiliza:</strong></label><br><br>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                        <label for="tecnologia1"> HTML</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                        <label for="tecnologia2"> CSS</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript">
+                        <label for="tecnologia3"> JavaScript</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+                        <label for="tecnologia4"> PHP</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+                        <label for="tecnologia5"> C#</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Java">
+                        <label for="tecnologia7"> Java</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Python">
+                        <label for="tecnologia6"> Python</label>
+                    </li>
+
+                </ul>
+            </div>
+        </fieldset>
+
+        <!-- Caixa de texto -->
+        <div class="campo">
+            <br>
+            <label for="experiencia"><strong>Conte um pouco mais sobre suas experiências: </strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Enviar Currículo</button>
+
+    </form>
+
+
+</body>
 
 </html>
-
 
 
 
